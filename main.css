@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color:#666;
+    font-family: Roboto, sans-serif;
+}
+nav, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+a.btn{
+    text-transform: uppercase;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    opacity: 1;
+    padding: 20px;
+    font-size: 22px;
+    border: 5px solid transparent;
+}
+a.btn:hover{
+    border: 5px solid maroon;
+    color: maroon;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 22px;
+}
+i{
+    font-size: 40px;
+    color: maroon;
+}
+span{
+    color: black;
+}
+.main{
+    overflow-x:hidden
+}
+/* Header*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    z-index: 9999;
+    height: 50px;
+    background: #383C42;
+    animation: 1s appear 1s forwards;
+    opacity: 0;
+}
+@keyframes appear{
+    100%{
+        opacity: 1;
+    }
+}
+header h2{
+    color:#fff;
+}
+/* Nav */
+nav{
+    display: flex;
+}
+nav li{
+    margin: 0 15px;
+}
+nav a{
+    color:#fff;
+}
+nav a:hover{
+    color: gray;
+    text-decoration: none;
+}
+/* Banner */
+.banner-area{
+    position: relative;
+    /*Banner filling the viewport*/
+    min-height: 100vh;
+    /*To center banner-text*/
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+}
+.banner-area .banner-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/Joshua-Rodriguez.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+.banner-text{
+    opacity: 0;
+    animation: 1s appear2 1s forwards;
+    text-align: center;
+}
+@keyframes appear2{
+   100%{
+       opacity: 1;
+   }
+}
+.banner-text h3{
+    font-size: 70px;
+    color:maroon;
+    margin-bottom: 60px;
+}
+blockquote{
+    text-align: right;
+    font-size: 30px;
+}
+/* Section */
+section{
+    display: flex;
+    flex-direction: column;
+    /*All sections centered by Y axis*/
+    align-items: center;
+    padding: 70px 50px;
+    width: 100%;
+}
+section p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+section h2{
+    margin-bottom: 80px;
+    color: maroon;
+}
+/* Content */
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* Gallery*/
+.gallery-area .content li{
+    padding: 5px;
+    text-align: center;   
+}
+.gallery-area img{
+    width: 100%;
+}
+.overlay{
+    position: relative;
+    width:450px;
+	height:300px;
+}
+.overlay .link{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:white;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    text-decoration: none;
+    transition: opacity 0.5s ease-in-out;
+}
+.overlay:hover .link {
+    opacity: 1;
+}
+.link p{
+    position: relative;
+    top:40%;
+    border: 2px solid maroon;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 13pt;
+    padding: 7px 0;
+    color:maroon;  
+    font-weight: bold;
+}
+.link p:hover{
+    background: maroon;
+    color:white;
+    font-weight: bold;
+}
+/* About */
+.about-area .content .about-box{
+    text-align: center;
+    padding: 20px;
+    height: 300px;
+}
+.about-icon{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+/* Contact */
+.contact-box i{
+    font-size: 33px;
+}
+.contact-area .content .contact-box{
+    height: 300px;
+    padding: 0 20px;
+    text-align: center;
+}
+.contact-box input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #262626;
+}
+.contact-box input[type=button]{
+    background: maroon;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 20px 45px 20px;
+}
+/* Footer*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
+    color: #fff;
+    padding: 20px 0;
+}
+footer p{
+    text-align: center;
+}
+.banner-area, .about-area, .gallery-area, .contact-area{
+    border-top: 50px solid #383C42;
+}
+/*Media queries
+@media (min-width: 640px){
+ 
+...
+ 
+}
+ 
+@media (min-width: 768px){
+ 
+...
+ 
+}
+ 
+@media (min-width: 1024px){
+ 
+...
+ 
+}
+ 
+@media (min-width: 1200px){
+ 
+...
+ 
+}*/
+@media (max-width: 800px){
+    section{
+        padding: 35px 25px;
+    }
+    section h2{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 800px){
+    header{
+        flex-direction: column;
+        height: 80px;
+        padding-top: 2px;
+    }
+}
+@media (max-width: 800px){
+    .banner-text{
+        width: 50%;
+    }
+    .banner-text blockquote{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:800px){
+    .about-area .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-area .content .about-box{
+        height: 50%;
+    }
+}
+@media (max-width: 800px){
+    .contact-area .contact-box p{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 1000px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-area img{
+        padding:10px 40px;
+    }
+}
+@media (min-width: 320px) and (max-width: 450px){
+    .banner-text h3 {
+        font-size: 3em;
+        margin-left: -5px;
+        margin-top: 235px;
+    }
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav li{
+        margin: 10px 0;
+    }
+    header{
+        height: 235px;
+    }
+    .gallery-area img{
+        width:85%;
+    }
+}
+
