@@ -1,7 +1,7 @@
-## Coderscamp Project 1
+# Coderscamp Project 1
 
-#Travel agency website
+## Travel agency website
 A simple, flex-based page for fictional travel agency "Lenda"
 
-#URL
-https://neternefer.github.io/
+## URL
+[Lenda Travel](https://neternefer.github.io/)
