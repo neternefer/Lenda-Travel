@@ -30,7 +30,7 @@ a.btn:hover{
     font-weight: bold;
     font-size: 22px;
 }
-.btn:focus, input[type="button"]:focus{
+.btn:focus, input[type="button"]{
     box-shadow: none;
     outline: none;
 }
